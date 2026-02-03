@@ -84,7 +84,9 @@ Trying to attend to the library's needs / Manage everything so it runs smoothly
 - slow system which affects the entire library
 
 #### Non-Goals
-- TBD
+- doesn't care about people that are happy (have books)
+- uninterested in experienced users
+- her stress levels 
 
 ---
 
