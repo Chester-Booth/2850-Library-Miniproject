@@ -134,12 +134,44 @@ Trying to attend to the library's needs / Manage everything so it runs smoothly
 
 ---
 
-## Persona 4: 
+## Persona 4: Emma - a parent (community member)
 
 ### Context and Role 
+- Role: borrowing children's books for her kids
+- Environment: at home, during her lunch break from work
+- Trigger: kids asked for new books to read, wants to check what's available before driving to the library
 
 ### Goals and Success 
+- primary goal: sign up for account online and reserve children's books during lunch break so she can pick them up after work
+    - easy sign up process she can complete in 10 minutes
+    - see which children's books are available
+    - reserve books so they're ready for pickup
+
+### Failures:
+- sign up requires her to visit in person
+- can't find the children's section on the website
+- reserves books but doesn't get confirmation
+- drives to library and reservation isn't in the system
 
 ### Pain Points
+- doesn't have time to go to library and find out books aren't there
+- unsure if community members can use the university library
+- doesn't have an account yet
+- doesn't know if she's eligible to sign up
+- worried it will require lots of documents
+- kids are picky about what they want to read
+
+### Workarounds:
+- call the library to ask about availability
+- visit multiple libraries in one trip
+- buy books instead of borrowing
 
 ### Constraints and Non-Goals
+- constraints:
+    - very limited free time
+    - can only visit library after work hours
+    - needs books suitable for young children
+- non goals:
+    - doesn't need access to academic journals
+    - not interested in ebooks (kids prefer physical books)
+    - doesn't need to know about library events
