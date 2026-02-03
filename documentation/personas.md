@@ -90,7 +90,51 @@ Trying to attend to the library's needs / Manage everything so it runs smoothly
 
 ---
 
-## Persona 3: TBD
+## Persona 3: Charles - volunteer (new role)
+
+### Context and Role 
+- Role: shelving books, helping students find books, assisting Alice with basic tasks, learning the library system
+- Environment: library during exam season
+- Trigger: first week volunteering, unsure about how things work
+
+### Goals and Success 
+- Primary goal: learn the system and help students without needing constant supervision
+- shelve books in correct locations
+- answer basic student questions confidently
+- not slow down Alice's workflow
+
+### Failures:
+- keeps making mistakes with the system
+- students complain about him to Alice
+- takes too long to complete tasks
+
+### Pain Points
+- doesn't know where books are located
+- library system is confusing to use
+- students get frustrated when he can't help quickly
+- afraid to ask Alice too many questions
+    - she seems busy/stressed
+    - doesn't want to be a burden
+- might give wrong information to students
+
+### Workarounds 
+- ask other volunteers for help
+- use the map of the library
+- write down common questions and answers
+
+### Constraints and Non-Goals
+- constraints:
+    - limited training time
+    - only works a few hours per week
+    - doesn't have full system access
+- non goals:
+    - doesn't need to manage the entire library
+    - doesn't need to train other volunteers
+    - not expected to know everything on day one
+
+---
+
+## Persona 4: 
 
 ### Context and Role 
 
