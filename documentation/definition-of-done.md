@@ -8,14 +8,14 @@ A story is considered "done" only when ALL of the following is true:
 - No Crashes - errors return meaninful responses
 
 ## Code Quality and Baseline
-- Naming and formatting follows class standard
+- Naming and formatting follows class standard (no klint or detekt errors)
 - Route is thin (business logic not embedded in routing)
 - NO unsafe !! without justification
 - No obvious duplicated logic
 
 ## Testing
 - At least one of the following:
-    1. One automated test
+    1. One automated test (in github action)
     2. A written manual test checklist that was run.
 
 ## Pull Request and Integration
@@ -25,6 +25,7 @@ A story is considered "done" only when ALL of the following is true:
     - Code is understandable
     - It meets the DoD
     - It doesn't break the existing functionality
+    - Passes all github actions tests
 - PR builds and runs after merge
 
 
