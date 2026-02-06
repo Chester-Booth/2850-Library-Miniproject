@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: [self-hosted, linux]
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: setup java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'  
+
+      - name: make amper executable
+        if: runner.os != 'Windows'
+        run: chmod +x ./amper
+
+      - name: run tests
+        run: ./amper test
+
+      - name: build
+        run: ./amper build
+
+
+
