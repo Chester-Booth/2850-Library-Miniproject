@@ -118,22 +118,22 @@ post(/details/ISBN)  // check out
 
 ### Assigning Responsibilities
 - [x] allocate sprint user stories to people (in github)
-- [ ]  setup environment (merge) and get initial branches made for stories
-	- [ ] setup github actions 
+- [x]  setup environment (merge) and get initial branches made for stories
+	- [x] setup github actions 
 
 
 #### Teamwork
 ##### PRs
 - give time for reviews and changes
-	- [ ] github actions to run `./amper build` and `./amper test` and `./gradlew ktlintCheck` and `/gradlew detekt` 
+	- [x] github actions to run `./amper build` and `./amper test` and `./gradlew ktlintCheck` and `/gradlew detekt` 
 		- ensures no linting / build errors and tests pass
 -  final deadline is Friday the 13th but demo(??) needs to be made for then 
-- [ ] what should the deadlines for the issues to have PRs / been merged to main be?  
-	- PRs by: `  /02/26`
-	- Merged by: `  /02/26`
+- [x] what should the deadlines for the issues to have PRs / been merged to main be?  
+	- PRs by: `10/02/26` // next session
+	- Merged by: `11/02/26` // next meeting
 ##### Meetings
 - [ ] do PRs in person ? 
-- [ ] meeting next week? 
+- [x] meeting next week? 
 
 ---
 now its just doing the implementation
