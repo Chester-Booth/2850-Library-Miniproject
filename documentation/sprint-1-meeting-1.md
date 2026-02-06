@@ -8,8 +8,12 @@
 - ~10 user stories
 - 2-3 stories with acceptance criteria
 
-we are going to use the user stories for the tasks we do for the sprint so maybe
-- extra persona (?) (more user stories that fit the sprint goal) 
+we are going to use the user stories for the tasks we do for the sprint so maybe extra persona (?) 
+
+1. go through personas and review them
+2. go through draft issues and review them
+
+3. make acceptance criteria
 
 
 - [ ]Take a screenshot of kanban and files and upload to gradescope
@@ -40,6 +44,8 @@ and some code has to be written by 10th feb (next session)|
 
 #### Structure
 ##### Questions
+- Ktor materials / confidence ? 
+	- 
 - What data do we need?  
 	- 
 - How will data be stored and what does that look like?  
@@ -56,6 +62,12 @@ and some code has to be written by 10th feb (next session)|
 	- review changes 
 	- then merge to main
 - [ ] decide css framework (bootstrap / pico.css)
+- [ ] decide tech details (pebble(or kotlinx.html/amper(or gradlew))
+	- Generating HTML (DSL / Pebble)
+	- Accessing Datbase
+		- Exposed Library 
+		- Store Database (H2 / sqlite)
+		- Access Database in code (SQL DSL vs DAO API)
 
 ##### Layout / Design
 - [ ] Wireframing
@@ -75,14 +87,14 @@ and some code has to be written by 10th feb (next session)|
 
 ### Assigning Responsibilities
 - [ ] allocate sprint user stories to people (in github)
-- [ ]  setup environment and get initial branches made for stories
+- [ ]  setup environment (merge) and get initial branches made for stories
 	- [ ] setup github actions 
 
 
 #### Teamwork
 ##### PRs
 - give time for reviews and changes
-	- [ ] github actions to run `./gradlew build` and `./gradlew check` (?) 
+	- [ ] github actions to run `./amper build` and `./amper test` and `./gradlew ktlintCheck` and `/gradlew detekt` 
 		- ensures no linting / build errors and tests pass
 -  final deadline is Friday the 13th but demo(??) needs to be made for then 
 - [ ] what should the deadlines for the issues to have PRs / been merged to main be?  
