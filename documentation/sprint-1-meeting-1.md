@@ -90,10 +90,12 @@ post(/details/ISBN)  // check out
 		- Where it will be?
 		- How pages link together & user flow
 		- add colours swatch and fonts to the wireframe image  
+	- ![[Pasted image 20260206114503.png]]
 - [x] <i style="font-family:Comic Sans MS; background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet); background-clip: text; color: transparent;">graphic design is my passion</i>
     - decide colours https://coolors.co ( [Accessibility](https://coolors.co/contrast-checker/112a46-acc8e5) ) 
     - ```
-      background  ##F4F6F6 
+	https://coolors.co/f4f6f6-dde3e3-242e2d-475b5a-d7acc0-8cb369-c81d25
+      background  #F4F6F6 
 	text colour (h1-6)  #242E2D
 	text colour (content) #475B5A
 	alt background #DDE3E3 
@@ -102,6 +104,7 @@ post(/details/ISBN)  // check out
 	no (#C81D25)  accent buttons
 	accent colour  #D7ACC0
       ```
+![[Pasted image 20260206114514.png]]
 	- [x] pick fonts ( Sans Serif vs Serif vs Mix ) 
 		  - <span style="font-family: Inter, 'Comic Sans MS';">Inter</span> / <span style="font-family: Roboto, 'Comic Sans MS';">Roboto</span> / <span style="font-family: Noto Sans, 'Comic Sans MS';">Noto Sans</span>
 		  - <span style="font-family: 'Playfair','Playfair 12pt Light', 'Comic Sans MS';">Playfair </span> / <span style="font-family: 'Playfair Display', 'Comic Sans MS';">Playfair Display</span> / <span style="font-family: 'Roboto Slab', 'Comic Sans MS';">Roboto Slab</span> / <span style="font-family: 'Roboto Serif','Roboto Serif 14pt', 'Comic Sans MS'">Roboto Serif</span>
@@ -114,7 +117,7 @@ post(/details/ISBN)  // check out
 
 
 ### Assigning Responsibilities
-- [ ] allocate sprint user stories to people (in github)
+- [x] allocate sprint user stories to people (in github)
 - [ ]  setup environment (merge) and get initial branches made for stories
 	- [ ] setup github actions 
 
