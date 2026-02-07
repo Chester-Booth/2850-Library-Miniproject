@@ -37,3 +37,6 @@ out/
 
 ### IDEA ###
 .idea/
+
+### Github Runners ###
+actions-runner/
