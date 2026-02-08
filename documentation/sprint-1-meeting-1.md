@@ -104,7 +104,7 @@ post(/details/ISBN)  // check out
 	no (#C81D25)  accent buttons
 	accent colour  #D7ACC0
       ```
-![[Pasted image 20260206114514.png]]
+![Pasted image 20260206114514.png](Pasted%20image%2020260206101233.png)
 	- [x] pick fonts ( Sans Serif vs Serif vs Mix ) 
 		  - <span style="font-family: Inter, 'Comic Sans MS';">Inter</span> / <span style="font-family: Roboto, 'Comic Sans MS';">Roboto</span> / <span style="font-family: Noto Sans, 'Comic Sans MS';">Noto Sans</span>
 		  - <span style="font-family: 'Playfair','Playfair 12pt Light', 'Comic Sans MS';">Playfair </span> / <span style="font-family: 'Playfair Display', 'Comic Sans MS';">Playfair Display</span> / <span style="font-family: 'Roboto Slab', 'Comic Sans MS';">Roboto Slab</span> / <span style="font-family: 'Roboto Serif','Roboto Serif 14pt', 'Comic Sans MS'">Roboto Serif</span>

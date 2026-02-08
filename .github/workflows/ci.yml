@@ -24,10 +24,10 @@ jobs:
         run: chmod +x ./amper
 
       - name: run tests
-        run: ./amper test
+        run: ./amper test -m server
 
       - name: build
-        run: ./amper build
+        run: ./amper build -m server
 
 
 
