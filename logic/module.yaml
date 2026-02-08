@@ -3,6 +3,4 @@ product:
   platforms: [jvm]
 
 dependencies:
-  - $libs.exposed.core
-  - $libs.exposed.dao
-  - $libs.exposed.jdbc
+  - ../database
