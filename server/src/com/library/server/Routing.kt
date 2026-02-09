@@ -1,4 +1,4 @@
-package com.library
+package com.library.server
 
 import io.ktor.server.application.*
 import io.ktor.server.response.*

@@ -2,6 +2,7 @@ product:
   type: jvm/app
 
 dependencies:
+  - ../logic
   - io.ktor:ktor-server-core:3.4.0
   - io.ktor:ktor-server-netty:3.4.0
   - ch.qos.logback:logback-classic:1.4.14
