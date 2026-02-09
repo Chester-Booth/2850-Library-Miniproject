@@ -1,6 +1,8 @@
 {% extends "base.peb" %}
 {% block content %}
-<h2> Welcome to the Library </h2>
+<h2> Welcome to the Library</h2>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquam sed urna a mollis. Aliquam vitae iaculis odio. Integer a odio elit. Vestibulum porttitor est consequat mauris blandit molestie. Donec faucibus facilisis commodo. Aenean vulputate sollicitudin eros, in dictum mauris finibus vitae. Mauris rhoncus ligula id est sodales vehicula. Aliquam tincidunt ex consectetur, ornare nisl eu, bibendum dui. In quis urna hendrerit mauris cursus accumsan eget ultricies magna. Ut nec odio euismod, vehicula est vel, consequat est. Nam vitae mollis lacus, quis sollicitudin sem.  </p>
+
+<div class="alt-background"
 {% endblock %}

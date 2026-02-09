@@ -1,0 +1,33 @@
+@import url(colours.css);
+
+body {
+    background: #F4F6F6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", serif;
+    color: #242E2D;
+}
+
+*{
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    color: #475B5A;
+}
+
+.alt-background{
+    background: #DDE3E3;
+}
+
+.accent-background{
+    background: #D7ACC0;
+}
+.accent-text{
+    color: #D7ACC0;
+}
+
+.btn-yes{
+    background: #8CB369;
+}
+.btn-no{
+    background: #C81D25;
+}
