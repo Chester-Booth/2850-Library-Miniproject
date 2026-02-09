@@ -6,9 +6,7 @@ import io.ktor.server.routing.*
 
 fun Application.configureRouting() {
     routing {
-        get("/") {
-            call.respondText("Hello World!")
-        }
+        get("/") { call.search() }
         get("/search") { call.search() }
         post("/search") { call.searchResults() }
     }

@@ -1,12 +1,21 @@
-{% if searchTerm %}
-  <p>Search results for '{{ searchTerm }}':</p>
-  {% if results.count() == 0 %}
-  <p>No matching books found.</p>
-  {% else %}
-  <ul>
-    {% for result in results %}
-    <li><a href="/details/{{ result.id }}">{{ result.title }}</a></li>
-    {% endfor %}
-  </ul>
-  {% endif %}
-{% endif %}
+{% extends "base.peb" %}
+{% block content %}
+<p>Search for any books we have in the library.</p>
+
+<p>Currently we have <strong> {#  TODO {{ books }}  #} books</strong> in our library.</p>
+
+<form role="search"
+  hx-post="/search"
+  hx-target="#search-results"
+  hx-swap="innerHTML"
+  hx-on::after-request="if(event.detail.successful) this.reset()">
+  <input
+    type="search"
+    name="search_term"
+    placeholder="Book Title"
+    aria-label="Search">
+  <input type="submit" value="Search">
+</form>
+
+<div id="search-results"></div>
+{% endblock %}
