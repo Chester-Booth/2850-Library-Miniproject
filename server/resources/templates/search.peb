@@ -1,8 +1,14 @@
 {% extends "base.peb" %}
+{% block head %}
+<script
+  src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.min.js"
+  integrity="sha384-/TgkGk7p307TH7EXJDuUlgG3Ce1UVolAOFopFekQkkXihi5u/6OCvVKyz1W+idaz"
+  crossorigin="anonymous"></script>
+{% endblock %}
 {% block content %}
 <p>Search for any books we have in the library.</p>
 
-<p>Currently we have <strong> {#  TODO {{ books }}  #} books</strong> in our library.</p>
+<p>Currently we have <strong> {{ books }} books</strong> in our library.</p>
 
 <form role="search"
   hx-post="/search"
@@ -11,7 +17,7 @@
   hx-on::after-request="if(event.detail.successful) this.reset()">
   <input
     type="search"
-    name="search_term"
+    name="q"
     placeholder="Book Title"
     aria-label="Search">
   <input type="submit" value="Search">
