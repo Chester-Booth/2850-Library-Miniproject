@@ -7,7 +7,7 @@ import org.jetbrains.exposed.v1.core.dao.id.IntIdTable
 import org.jetbrains.exposed.v1.core.ReferenceOption
 
 object UsersTable : IntIdTable("users") {
-    val username = varchar("username", MAX_VARCHAR_LENGTH)
+    val username = varchar("username", MAX_VARCHAR_LENGTH).uniqueIndex()
     val email = varchar("email", MAX_VARCHAR_LENGTH)
     val address = varchar("address", MAX_VARCHAR_LENGTH)
     val passwordHash = varchar("password_hash", MAX_VARCHAR_LENGTH)

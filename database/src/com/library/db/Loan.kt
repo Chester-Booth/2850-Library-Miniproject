@@ -9,7 +9,7 @@ import org.jetbrains.exposed.v1.datetime.*
 
 object LoanTable : IntIdTable("loan") {
     val dateOut = datetime("date_out").defaultExpression(CurrentDateTime) // set to current date when added
-    val dateIn = datetime("date_in")
+    val dateIn = datetime("date_in").nullable()
     val status = varchar("status", MAX_VARCHAR_LENGTH)
     val returnDate = datetime("return_date")
     val userId = reference("user_id", UsersTable, ReferenceOption.CASCADE)
