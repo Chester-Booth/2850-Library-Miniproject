@@ -9,5 +9,7 @@ fun Application.configureRouting() {
         get("/") {
             call.respondText("Hello World!")
         }
+        get("/search") { call.search() }
+        post("/search") { call.searchResults() }
     }
 }
