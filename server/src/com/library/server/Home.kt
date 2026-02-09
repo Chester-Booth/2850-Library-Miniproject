@@ -1,4 +1,9 @@
 package com.library.server
 
-class Home {
+import io.ktor.server.application.ApplicationCall
+import io.ktor.server.pebble.respondTemplate
+import kotlin.collections.mapOf
+
+suspend fun ApplicationCall.homePage() {
+    respondTemplate("index.peb", mapOf())
 }

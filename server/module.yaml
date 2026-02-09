@@ -1,17 +1,19 @@
 product:
   type: jvm/app
 
-dependencies:
-  - ../logic
-  - io.ktor:ktor-server-core:3.4.0
-  - io.ktor:ktor-server-netty:3.4.0
-  - ch.qos.logback:logback-classic:1.4.14
-  - io.ktor:ktor-server-config-yaml:3.4.0
-
-test-dependencies:
-  - io.ktor:ktor-server-test-host:3.4.0
-  - org.jetbrains.kotlin:kotlin-test-junit:2.3.0
-
 settings:
+  ktor: enabled
   jvm:
     mainClass: io.ktor.server.netty.EngineMain
+
+dependencies:
+  - ../logic
+  - $ktor.server.core
+  - $ktor.server.netty
+  - $ktor.server.pebble
+  - ch.qos.logback:logback-classic:1.5.13
+  - $ktor.server.configYaml
+
+test-dependencies:
+  - $ktor.server.testHost
+  - $kotlin.test.junit
