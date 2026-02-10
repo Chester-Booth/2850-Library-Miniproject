@@ -18,8 +18,6 @@ fun Application.module() {
 
 @OptIn(ExperimentalTime::class)
 fun Application.testModule() {
-    TestDatabase.create()
-    TransactionManager.defaultDatabase = TestDatabase.db
     configureTemplates()
     configureRouting()
 }

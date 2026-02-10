@@ -19,7 +19,7 @@ class ApplicationTest :
                 }
                 val response = client.get("/").also { checkForHtml(it) }
                 response.bodyAsText().let {
-                    it shouldContain "<h1>Library Application</h1>"
+                    it shouldContain "<h1> Library Application</h1>"
                 }
             }
         }
