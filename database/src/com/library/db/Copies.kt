@@ -1,10 +1,10 @@
 package com.library.db
 
-import org.jetbrains.exposed.v1.dao.IntEntity
-import org.jetbrains.exposed.v1.dao.IntEntityClass
+import org.jetbrains.exposed.v1.core.ReferenceOption
 import org.jetbrains.exposed.v1.core.dao.id.EntityID
 import org.jetbrains.exposed.v1.core.dao.id.IntIdTable
-import org.jetbrains.exposed.v1.core.ReferenceOption
+import org.jetbrains.exposed.v1.dao.IntEntity
+import org.jetbrains.exposed.v1.dao.IntEntityClass
 
 // Table Definition
 object CopiesTable : IntIdTable("copies") {
@@ -13,14 +13,14 @@ object CopiesTable : IntIdTable("copies") {
 }
 
 // Entity Definition
-class Copies(id: EntityID<Int>) : IntEntity(id) {
+class Copies(
+    id: EntityID<Int>,
+) : IntEntity(id) {
     companion object : IntEntityClass<Copies>(CopiesTable)
 
     var bookId by Books referencedOn CopiesTable.bookId
     var format by CopiesTable.format
-    //val loan by Loan referrersOn LoanTable.copyId // 1 copy, 1 loan
+    // val loan by Loan referrersOn LoanTable.copyId // 1 copy, 1 loan
 
-    override fun toString(): String {
-        return "Copies(id=$id, bookId=$bookId, format=$format)"
-    }
+    override fun toString(): String = "Copies(id=$id, bookId=$bookId, format=$format)"
 }
