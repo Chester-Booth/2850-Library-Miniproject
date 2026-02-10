@@ -12,12 +12,15 @@ fun main(args: Array<String>) {
 }
 
 fun Application.module() {
+    TransactionManager.defaultDatabase = LibraryDatabase.db
     configureTemplates()
     configureRouting()
 }
 
 @OptIn(ExperimentalTime::class)
 fun Application.testModule() {
+    TestDatabase.create()
+    TransactionManager.defaultDatabase = TestDatabase.db
     configureTemplates()
     configureRouting()
 }

@@ -23,6 +23,18 @@ class ApplicationTest :
                 }
             }
         }
+
+        "Search Page Loads and Shows H1" {
+            testApplication {
+                application {
+                    testModule()
+                }
+                val response = client.get("/search").also { checkForHtml(it) }
+                response.bodyAsText().let {
+                    it shouldContain "<h1>Library - Search</h1>"
+                }
+            }
+        }
     })
 
 fun checkForHtml(response: HttpResponse) {

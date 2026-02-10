@@ -1,0 +1,9 @@
+<p>Search results for '{{ searchTerm }}':</p>
+<ul>
+{% for result in results %}
+<li><a href="/details/{{ result.bookISBN }}">{{ result.title }}</a> by {{ result.author }}</li>
+{% else %}
+    <p>No matching books found.</p>
+{% endfor %}
+</ul>
+

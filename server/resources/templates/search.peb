@@ -1,0 +1,29 @@
+{% extends "base.peb" %}
+{% block title %}Library - Search{% endblock %}
+{% block head %}
+<script
+  src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.min.js"
+  integrity="sha384-/TgkGk7p307TH7EXJDuUlgG3Ce1UVolAOFopFekQkkXihi5u/6OCvVKyz1W+idaz"
+  crossorigin="anonymous"></script>
+{% endblock %}
+{% block content %}
+<h1>Library - Search</h1>
+<p>Search for any books we have in the library.</p>
+
+<p>Currently we have <strong> {{ books }} books</strong> in our library.</p>
+
+<form role="search"
+  hx-post="/search"
+  hx-target="#search-results"
+  hx-swap="innerHTML"
+  hx-on::after-request="if(event.detail.successful) this.reset()">
+  <input
+    type="search"
+    name="q"
+    placeholder="Book Title"
+    aria-label="Search">
+  <input type="submit" value="Search">
+</form>
+
+<div id="search-results"></div>
+{% endblock %}

@@ -8,3 +8,4 @@ dependencies:
   - org.jetbrains.exposed:exposed-jdbc:1.0.0
   - org.jetbrains.exposed:exposed-kotlin-datetime:1.0.0
   - org.jetbrains.kotlinx:kotlinx-datetime:0.7.1
+  - com.h2database:h2:2.4.240
