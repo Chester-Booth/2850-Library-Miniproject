@@ -8,11 +8,13 @@ settings:
 
 dependencies:
   - ../logic
+  - ../database
   - $ktor.server.core
   - $ktor.server.netty
   - $ktor.server.pebble
   - ch.qos.logback:logback-classic:1.5.13
   - $ktor.server.configYaml
+  - org.jetbrains.exposed:exposed-jdbc:1.0.0
 
 test-dependencies:
   - $ktor.server.testHost

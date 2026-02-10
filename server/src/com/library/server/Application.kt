@@ -1,6 +1,8 @@
 package com.library.server
 
-import io.ktor.server.application.*
+import com.library.db.LibraryDatabase
+import io.ktor.server.application.Application
+import org.jetbrains.exposed.v1.jdbc.transactions.TransactionManager
 
 fun main(args: Array<String>) {
     io.ktor.server.netty.EngineMain
@@ -8,6 +10,7 @@ fun main(args: Array<String>) {
 }
 
 fun Application.module() {
+    TransactionManager.defaultDatabase = LibraryDatabase.db
     configureTemplates()
     configureRouting()
 }
