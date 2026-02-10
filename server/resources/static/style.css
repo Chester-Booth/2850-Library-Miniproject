@@ -1,33 +1,36 @@
-@import url(colours.css);
-
 body {
-    background: #F4F6F6;
+    background: var(--background-colour);
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Playfair Display", serif;
-    color: #242E2D;
+    color: var(--heading-colour);
 }
 
 *{
     font-family: "Atkinson Hyperlegible", sans-serif;
-    color: #475B5A;
+    color: var(--text-colour);
 }
 
 .alt-background{
-    background: #DDE3E3;
+    background: var(--alt-background-colour);
 }
 
 .accent-background{
-    background: #D7ACC0;
+    background: var(--accent-colour);
 }
 .accent-text{
-    color: #D7ACC0;
+    color: var(--accent-colour);
 }
 
 .btn-yes{
-    background: #8CB369;
+    background: var(--confirm-colour);
 }
 .btn-no{
-    background: #C81D25;
+    background: var(--deny-colour);
+}
+
+hr{
+    color: var(--accent-colour);
+    height: 5px;
 }
