@@ -2,3 +2,4 @@ modules:
   - ./server
   - ./database
   - ./logic
+  - ./init
