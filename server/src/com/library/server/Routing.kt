@@ -9,6 +9,5 @@ fun Application.configureRouting() {
     routing {
         staticResources("/static", "static")
         get("/") { call.homePage() }
-        get("/home") { call.homePage() }
     }
 }

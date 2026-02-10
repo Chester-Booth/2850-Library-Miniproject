@@ -1,3 +1,5 @@
+
+/* set default theming */
 body {
     background: var(--background-colour);
 }
@@ -9,10 +11,6 @@ h1, h2, h3, h4, h5, h6 {
 
 *{
     font-family: "Atkinson Hyperlegible", sans-serif;
-    color: var(--text-colour);
-}
-
-bi {
     color: var(--text-colour);
 }
 
@@ -41,5 +39,9 @@ hr{
 
 .navbar {
     margin-bottom: 1rem;
+}
+
+/* fix colour for navbar text*/
+.nav-link, .navbar{
     color: var(--text-colour) !important;
 }
