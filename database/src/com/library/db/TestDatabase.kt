@@ -1,11 +1,11 @@
 package com.library.db
 
+import kotlinx.datetime.*
 import org.jetbrains.exposed.v1.jdbc.Database
 import org.jetbrains.exposed.v1.jdbc.SchemaUtils
 import org.jetbrains.exposed.v1.jdbc.insert
 import org.jetbrains.exposed.v1.jdbc.insertAndGetId
 import org.jetbrains.exposed.v1.jdbc.transactions.transaction
-import kotlinx.datetime.*
 
 @kotlin.time.ExperimentalTime
 object TestDatabase {
@@ -21,26 +21,28 @@ object TestDatabase {
             SchemaUtils.drop(BooksTable, CopiesTable, LoanTable, ReservationsTable, UsersTable)
             SchemaUtils.create(BooksTable, CopiesTable, LoanTable, ReservationsTable, UsersTable)
 
-            val book = BooksTable.insertAndGetId {
-                it[title] = "A Book"
-                it[author] = "Author A"
-                it[bookISBN] = 1029109201L
-            }
+            val book =
+                BooksTable.insertAndGetId {
+                    it[title] = "A Book"
+                    it[author] = "Author A"
+                    it[bookISBN] = 1029109201L
+                }
 
-            val copy = CopiesTable.insertAndGetId {
-                it[format] = "First Album"
-                it[bookId] = book
-            }
+            val copy =
+                CopiesTable.insertAndGetId {
+                    it[format] = "First Album"
+                    it[bookId] = book
+                }
 
-            val user = UsersTable.insertAndGetId {
-                it[username] = "username"
-                it[email] = "email@email.com"
-                it[address] = "XXX-XXX"
-                it[passwordHash] = "passwordHash"                
-            }
+            val user =
+                UsersTable.insertAndGetId {
+                    it[username] = "username"
+                    it[email] = "email@email.com"
+                    it[address] = "XXX-XXX"
+                    it[passwordHash] = "passwordHash"
+                }
 
             // expandable
-
         }
     }
 }
