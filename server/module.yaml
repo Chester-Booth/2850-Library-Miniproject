@@ -21,3 +21,4 @@ test-dependencies:
   - $kotlin.test.junit
   - $kotlin.test
   - io.kotest:kotest-assertions-core:5.9.1
+  - io.kotest:kotest-core:4.2.0.RC2
