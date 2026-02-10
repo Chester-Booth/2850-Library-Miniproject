@@ -1,0 +1,27 @@
+2026-02-10 10:47:16.774840Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BOOKS" not found (this database is empty); SQL statement:
+SELECT COUNT(BOOKS.ID) FROM BOOKS [42104-240]
+2026-02-10 10:47:16.797793Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BOOKS" not found (this database is empty); SQL statement:
+SELECT COUNT(BOOKS.ID) FROM BOOKS [42104-240]
+2026-02-10 10:47:16.808627Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BOOKS" not found (this database is empty); SQL statement:
+SELECT COUNT(BOOKS.ID) FROM BOOKS [42104-240]
+2026-02-10 10:48:06.418335Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BOOKS" not found (this database is empty); SQL statement:
+SELECT COUNT(BOOKS.ID) FROM BOOKS [42104-240]
+2026-02-10 10:48:06.462791Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BOOKS" not found (this database is empty); SQL statement:
+SELECT COUNT(BOOKS.ID) FROM BOOKS [42104-240]
+2026-02-10 10:48:06.476782Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BOOKS" not found (this database is empty); SQL statement:
+SELECT COUNT(BOOKS.ID) FROM BOOKS [42104-240]
+2026-02-10 11:07:22.930783Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BOOKS" not found (this database is empty); SQL statement:
+SELECT COUNT(BOOKS.ID) FROM BOOKS [42104-240]
+2026-02-10 11:07:22.954642Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BOOKS" not found (this database is empty); SQL statement:
+SELECT COUNT(BOOKS.ID) FROM BOOKS [42104-240]
+2026-02-10 11:07:22.961486Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BOOKS" not found (this database is empty); SQL statement:
+SELECT COUNT(BOOKS.ID) FROM BOOKS [42104-240]

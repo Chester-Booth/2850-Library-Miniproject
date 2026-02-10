@@ -13,7 +13,14 @@ dependencies:
   - $ktor.server.pebble
   - ch.qos.logback:logback-classic:1.5.13
   - $ktor.server.configYaml
+  - ../database
+  - org.jetbrains.exposed:exposed-jdbc:1.0.0
 
 test-dependencies:
   - $ktor.server.testHost
   - $kotlin.test.junit
+  - $ktor.server.testHost
+  - $kotlin.test.junit
+  - $kotlin.test
+  - io.kotest:kotest-assertions-core:5.9.1
+  - io.kotest:kotest-core:4.2.0.RC2
