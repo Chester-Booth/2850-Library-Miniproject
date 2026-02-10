@@ -40,3 +40,6 @@ out/
 
 ### Github Runners ###
 actions-runner/
+
+### Database ###
+*.db
