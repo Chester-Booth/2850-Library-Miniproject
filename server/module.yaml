@@ -18,9 +18,6 @@ dependencies:
 
 test-dependencies:
   - $ktor.server.testHost
-  - $kotlin.test.junit
-  - $ktor.server.testHost
-  - $kotlin.test.junit
-  - $kotlin.test
   - io.kotest:kotest-assertions-core:5.9.1
-  - io.kotest:kotest-core:4.2.0.RC2
+  - io.kotest:kotest-runner-junit5:5.9.1
+  - io.kotest:kotest-assertions-core:5.9.1
