@@ -1,9 +1,9 @@
 package com.library.db
 
-import org.jetbrains.exposed.v1.dao.IntEntity
-import org.jetbrains.exposed.v1.dao.IntEntityClass
 import org.jetbrains.exposed.v1.core.dao.id.EntityID
 import org.jetbrains.exposed.v1.core.dao.id.IntIdTable
+import org.jetbrains.exposed.v1.dao.IntEntity
+import org.jetbrains.exposed.v1.dao.IntEntityClass
 
 const val MAX_VARCHAR_LENGTH = 256
 
@@ -16,7 +16,9 @@ object BooksTable : IntIdTable("books") {
 }
 
 // Entity Definition
-class Books(id: EntityID<Int>) : IntEntity(id) {
+class Books(
+    id: EntityID<Int>,
+) : IntEntity(id) {
     companion object : IntEntityClass<Books>(BooksTable)
 
     var title by BooksTable.title
@@ -25,8 +27,5 @@ class Books(id: EntityID<Int>) : IntEntity(id) {
     var details by BooksTable.details
     val copies by Copies referrersOn CopiesTable.bookId
 
-
-    override fun toString(): String {
-        return "Books(id=$id, title=$title, isbn=$bookISBN)"
-    }
+    override fun toString(): String = "Books(id=$id, title=$title, isbn=$bookISBN)"
 }

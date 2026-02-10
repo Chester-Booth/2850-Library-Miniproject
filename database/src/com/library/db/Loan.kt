@@ -1,11 +1,12 @@
 package com.library.db
 
-import org.jetbrains.exposed.v1.dao.IntEntity
-import org.jetbrains.exposed.v1.dao.IntEntityClass
+import org.jetbrains.exposed.v1.core.ReferenceOption
 import org.jetbrains.exposed.v1.core.dao.id.EntityID
 import org.jetbrains.exposed.v1.core.dao.id.IntIdTable
-import org.jetbrains.exposed.v1.core.ReferenceOption
-import org.jetbrains.exposed.v1.datetime.*
+import org.jetbrains.exposed.v1.dao.IntEntity
+import org.jetbrains.exposed.v1.dao.IntEntityClass
+import org.jetbrains.exposed.v1.datetime.CurrentDateTime
+import org.jetbrains.exposed.v1.datetime.datetime
 
 object LoanTable : IntIdTable("loan") {
     val dateOut = datetime("date_out").defaultExpression(CurrentDateTime) // set to current date when added
@@ -17,7 +18,9 @@ object LoanTable : IntIdTable("loan") {
 }
 
 // Entity Definition
-class Loan(id: EntityID<Int>) : IntEntity(id) {
+class Loan(
+    id: EntityID<Int>,
+) : IntEntity(id) {
     companion object : IntEntityClass<Loan>(LoanTable)
 
     var dateOut by LoanTable.dateOut
@@ -27,7 +30,5 @@ class Loan(id: EntityID<Int>) : IntEntity(id) {
     val userId by Users referencedOn LoanTable.userId // check
     val copyId by Copies referencedOn LoanTable.copyId // check
 
-    override fun toString(): String {
-        return "Users(id=$id, dateOut=$dateOut, dateIn=$dateOut, status=$status, userId=$userId)"
-    }
+    override fun toString(): String = "Users(id=$id, dateOut=$dateOut, dateIn=$dateOut, status=$status, userId=$userId)"
 }
