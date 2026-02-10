@@ -1,0 +1,20 @@
+{% extends "base.peb" %}
+{% block title %}Library - Home{% endblock %}
+{% block content %}
+<h1> Library Application</h1>
+<hr class="accent-text">
+
+<h2> Welcome to the Library</h2>
+<p>This is the library application where you are able to do all sorts of things. Keep reading to find out more!</p>
+
+<h3>Things you can do in this app:</h3>
+
+<ol>
+    <li>Find books to loan</li>
+    <li>Loan out books</li>
+    <li>View your previously loaned books</li>
+    <li>Return Currently owned books</li>
+</ol>
+
+<p>Create an account or sign in to start your reading journey today!</p>
+{% endblock %}

@@ -12,6 +12,18 @@ import io.ktor.server.testing.testApplication
 class ApplicationTest :
     StringSpec({
 
+        "Home Page Loads and Shows H1" {
+            testApplication {
+                application {
+                    testModule()
+                }
+                val response = client.get("/").also { checkForHtml(it) }
+                response.bodyAsText().let {
+                    it shouldContain "<h1> Library Application</h1>"
+                }
+            }
+        }
+
         "Search Page Loads and Shows H1" {
             testApplication {
                 application {

@@ -14,6 +14,7 @@ dependencies:
   - $ktor.server.pebble
   - ch.qos.logback:logback-classic:1.5.13
   - $ktor.server.configYaml
+  - ../database
   - org.jetbrains.exposed:exposed-jdbc:1.0.0
 
 test-dependencies:
