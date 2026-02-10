@@ -1,0 +1,47 @@
+
+/* set default theming */
+body {
+    background: var(--background-colour);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", serif;
+    color: var(--heading-colour);
+}
+
+*{
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    color: var(--text-colour);
+}
+
+.alt-background{
+    background: var(--alt-background-colour);
+}
+
+.accent-background{
+    background: var(--accent-colour);
+}
+.accent-text{
+    color: var(--accent-colour);
+}
+
+.btn-yes{
+    background: var(--confirm-colour);
+}
+.btn-no{
+    background: var(--deny-colour);
+}
+
+hr{
+    color: var(--accent-colour);
+    border: 0.2rem solid;
+}
+
+.navbar {
+    margin-bottom: 1rem;
+}
+
+/* fix colour for navbar text*/
+.nav-link, .navbar{
+    color: var(--text-colour) !important;
+}
