@@ -32,5 +32,9 @@ h1, h2, h3, h4, h5, h6 {
 
 hr{
     color: var(--accent-colour);
-    height: 5px;
+    border: 0.2rem solid;
+}
+
+.navbar {
+    margin-bottom: 1rem;
 }
