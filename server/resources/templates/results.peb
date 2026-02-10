@@ -1,4 +1,3 @@
-
 <p>Search results for '{{ searchTerm }}':</p>
 <ul>
 {% for result in results %}
