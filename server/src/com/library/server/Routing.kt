@@ -12,6 +12,8 @@ fun Application.configureRouting() {
         get("/") { call.homePage() }
         get("/search") { call.searchPage() }
         post("/search") { call.searchResults() }
-        
+        get("/account/{id}") { call.accountPage() }
+        post("/account/{id}/change-password") { call.updatePassword() }
+
     }
 }
