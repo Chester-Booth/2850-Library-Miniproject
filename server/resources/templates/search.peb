@@ -1,4 +1,5 @@
 {% extends "base.peb" %}
+{% block title %}Library - Search{% endblock %}
 {% block head %}
 <script
   src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.min.js"

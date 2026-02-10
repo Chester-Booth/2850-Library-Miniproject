@@ -13,7 +13,7 @@ suspend fun search(term: String): List<Map<String, Any?>> =
             .find { BooksTable.title.lowerCase() like "%$term%" }
             .map { book ->
                 mapOf(
-                    "ISBN" to book.bookISBN,
+                    "bookISBN" to book.bookISBN,
                     "title" to book.title,
                     "author" to book.author,
                 )

@@ -1,3 +1,4 @@
+
 <p>Search results for '{{ searchTerm }}':</p>
 <ul>
 {% for result in results %}
@@ -6,3 +7,4 @@
     <p>No matching books found.</p>
 {% endfor %}
 </ul>
+
