@@ -5,7 +5,6 @@ import org.jetbrains.exposed.v1.jdbc.SchemaUtils
 import org.jetbrains.exposed.v1.jdbc.insertAndGetId
 import org.jetbrains.exposed.v1.jdbc.transactions.transaction
 
-@kotlin.time.ExperimentalTime
 object TestDatabase {
     const val URL = "jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;"
     const val DRIVER = "org.h2.Driver"
