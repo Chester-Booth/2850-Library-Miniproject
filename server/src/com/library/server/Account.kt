@@ -19,7 +19,7 @@ suspend fun ApplicationCall.accountPage() {
         return
     }
 
-    respondTemplate("account.peb", user + mapOf("id" to userId))
+    respondTemplate("account.peb", user + mapOf("id" to userId.toString()))
 }
 
 suspend fun ApplicationCall.updatePassword() {
@@ -36,9 +36,9 @@ suspend fun ApplicationCall.updatePassword() {
 
     if (error != null) {
         val user = getUserById(userId) ?: emptyMap()
-        respondTemplate("account.peb", user + mapOf("error" to error))
+        respondTemplate("account.peb", user + mapOf("id" to userId.toString(), "error" to error))
         return
     }
     val user = getUserById(userId) ?: emptyMap()
-    respondTemplate("account.peb", user + mapOf("success" to "Password upated successfully."))
+    respondTemplate("account.peb", user + mapOf("id" to userId.toString(), "success" to "Password updated successfully."))
 }

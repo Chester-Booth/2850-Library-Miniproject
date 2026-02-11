@@ -1,0 +1,63 @@
+2026-02-10 21:40:54.801871Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BOOKS" not found (this database is empty); SQL statement:
+SELECT COUNT(BOOKS.ID) FROM BOOKS [42104-240]
+2026-02-10 21:40:54.820342Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BOOKS" not found (this database is empty); SQL statement:
+SELECT COUNT(BOOKS.ID) FROM BOOKS [42104-240]
+2026-02-10 21:40:54.834779Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BOOKS" not found (this database is empty); SQL statement:
+SELECT COUNT(BOOKS.ID) FROM BOOKS [42104-240]
+2026-02-11 13:24:35.841019Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BOOKS" not found (this database is empty); SQL statement:
+SELECT COUNT(BOOKS.ID) FROM BOOKS [42104-240]
+2026-02-11 13:24:35.877181Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BOOKS" not found (this database is empty); SQL statement:
+SELECT COUNT(BOOKS.ID) FROM BOOKS [42104-240]
+2026-02-11 13:24:35.889487Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BOOKS" not found (this database is empty); SQL statement:
+SELECT COUNT(BOOKS.ID) FROM BOOKS [42104-240]
+2026-02-11 13:25:56.971612Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found (this database is empty); SQL statement:
+SELECT USERS.ID, USERS.USERNAME, USERS.EMAIL, USERS.ADDRESS, USERS.PASSWORD_HASH FROM USERS WHERE USERS.ID = ? [42104-240]
+2026-02-11 13:25:57.010891Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found (this database is empty); SQL statement:
+SELECT USERS.ID, USERS.USERNAME, USERS.EMAIL, USERS.ADDRESS, USERS.PASSWORD_HASH FROM USERS WHERE USERS.ID = ? [42104-240]
+2026-02-11 13:25:57.020388Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found (this database is empty); SQL statement:
+SELECT USERS.ID, USERS.USERNAME, USERS.EMAIL, USERS.ADDRESS, USERS.PASSWORD_HASH FROM USERS WHERE USERS.ID = ? [42104-240]
+2026-02-11 13:26:53.279955Z jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found (this database is empty); SQL statement:
+SELECT USERS.ID, USERS.USERNAME, USERS.EMAIL, USERS.ADDRESS, USERS.PASSWORD_HASH FROM USERS WHERE USERS.ID = ? [42104-240]
+2026-02-11 13:26:53.279956Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found (this database is empty); SQL statement:
+SELECT USERS.ID, USERS.USERNAME, USERS.EMAIL, USERS.ADDRESS, USERS.PASSWORD_HASH FROM USERS WHERE USERS.ID = ? [42104-240]
+2026-02-11 13:26:53.316442Z jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found (this database is empty); SQL statement:
+SELECT USERS.ID, USERS.USERNAME, USERS.EMAIL, USERS.ADDRESS, USERS.PASSWORD_HASH FROM USERS WHERE USERS.ID = ? [42104-240]
+2026-02-11 13:26:53.316442Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found (this database is empty); SQL statement:
+SELECT USERS.ID, USERS.USERNAME, USERS.EMAIL, USERS.ADDRESS, USERS.PASSWORD_HASH FROM USERS WHERE USERS.ID = ? [42104-240]
+2026-02-11 13:26:53.328374Z jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found (this database is empty); SQL statement:
+SELECT USERS.ID, USERS.USERNAME, USERS.EMAIL, USERS.ADDRESS, USERS.PASSWORD_HASH FROM USERS WHERE USERS.ID = ? [42104-240]
+2026-02-11 13:26:53.328374Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found (this database is empty); SQL statement:
+SELECT USERS.ID, USERS.USERNAME, USERS.EMAIL, USERS.ADDRESS, USERS.PASSWORD_HASH FROM USERS WHERE USERS.ID = ? [42104-240]
+2026-02-11 13:27:41.814371Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found (this database is empty); SQL statement:
+SELECT USERS.ID, USERS.USERNAME, USERS.EMAIL, USERS.ADDRESS, USERS.PASSWORD_HASH FROM USERS WHERE USERS.ID = ? [42104-240]
+2026-02-11 13:27:41.847644Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found (this database is empty); SQL statement:
+SELECT USERS.ID, USERS.USERNAME, USERS.EMAIL, USERS.ADDRESS, USERS.PASSWORD_HASH FROM USERS WHERE USERS.ID = ? [42104-240]
+2026-02-11 13:27:41.862019Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found (this database is empty); SQL statement:
+SELECT USERS.ID, USERS.USERNAME, USERS.EMAIL, USERS.ADDRESS, USERS.PASSWORD_HASH FROM USERS WHERE USERS.ID = ? [42104-240]
+2026-02-11 13:28:04.456290Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found (this database is empty); SQL statement:
+SELECT USERS.ID, USERS.USERNAME, USERS.EMAIL, USERS.ADDRESS, USERS.PASSWORD_HASH FROM USERS WHERE USERS.ID = ? [42104-240]
+2026-02-11 13:28:04.496951Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found (this database is empty); SQL statement:
+SELECT USERS.ID, USERS.USERNAME, USERS.EMAIL, USERS.ADDRESS, USERS.PASSWORD_HASH FROM USERS WHERE USERS.ID = ? [42104-240]
+2026-02-11 13:28:04.513912Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found (this database is empty); SQL statement:
+SELECT USERS.ID, USERS.USERNAME, USERS.EMAIL, USERS.ADDRESS, USERS.PASSWORD_HASH FROM USERS WHERE USERS.ID = ? [42104-240]

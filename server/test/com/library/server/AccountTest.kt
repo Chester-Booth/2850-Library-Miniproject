@@ -32,4 +32,19 @@ class AccountTest :
                 response.bodyAsText() shouldContain "User not found"
             }
         }
+        "Account Page Successfully Changes Password" {
+            testApplication {
+                application {
+                    testModule()
+                }
+                val response = client.post("/account/1/change-password") {
+                    header("Content-Type", "application/x-www-form-urlencoded")
+                    setBody("oldPassword=passwordHash&newPassword=newpass123")
+                }
+                response.status shouldBe HttpStatusCode.OK
+                response.bodyAsText().let {
+                    it shouldContain "Password updated successfully"
+                }
+            }
+        }
     })
