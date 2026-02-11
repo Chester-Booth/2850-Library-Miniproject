@@ -13,5 +13,7 @@ fun Application.configureRouting() {
         get("/search") { call.searchPage() }
         get("/details/{isbn}") { call.bookDetails() }
         post("/search") { call.searchResults() }
+        get("/account/{id}") { call.accountPage() }
+        post("/account/{id}/change-password") { call.updatePassword() }
     }
 }

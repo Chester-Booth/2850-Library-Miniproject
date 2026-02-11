@@ -43,3 +43,6 @@ actions-runner/
 
 ### Database ###
 *.db
+
+### DS Store ###
+.DS_Store

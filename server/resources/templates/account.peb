@@ -1,0 +1,30 @@
+{% extends "base.peb" %}
+    {% block title %}Account Settings{% endblock %}
+{% block content %}
+<h1>Account Settings</h1>
+{% if error %}
+<p style="color: #C81D25;">{{ error }}</p>
+{% endif %}
+
+{% if success %}
+<p style="color: #8CB369;">{{ success }}</p>
+{% endif %}
+
+<div>
+    <h2>Your Details</h2>
+    <p><strong>Username:</strong> {{ username }}</p>
+    <p><strong>Email:</strong> {{ email }}</p>
+    <p><strong>Address:</strong> {{ address }}</p>
+</div>
+
+<div>
+    <h2>Change Password</h2>
+    <form method="post" action="/account/{{ id }}/change-password">
+        <label for="oldPassword">Current Password</label>
+        <input type="password" id="oldPassword" name="oldPassword" required>
+        <label for="newPassword">New Password</label>
+        <input type="password" id="newPassword" name="newPassword" required>
+        <button type="submit">Save</button>
+    </form>
+</div>
+{% endblock %}
