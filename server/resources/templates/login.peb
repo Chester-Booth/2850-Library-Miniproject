@@ -2,6 +2,7 @@
 {% block title %}Log In{% endblock %}
 {% block content %}
 <h1>Log In</h1>
+<!--  TODO: add message if redirected from register page-->
 <form action="/login" method="POST">
     
     {% include "form_fields.peb" %}

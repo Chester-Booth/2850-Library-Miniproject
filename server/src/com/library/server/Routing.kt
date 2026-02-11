@@ -5,6 +5,7 @@ import io.ktor.server.routing.get
 import io.ktor.server.routing.post
 import io.ktor.server.http.content.staticResources
 import io.ktor.server.routing.routing
+import io.ktor.server.auth.authenticate
 
 fun Application.configureRouting() {
     routing {
@@ -13,7 +14,9 @@ fun Application.configureRouting() {
         get("/search") { call.searchPage() }
         post("/search") { call.searchResults() }
         get("/login") { call.loginPage() }
-        post("/login") { call.loginUser() }
+        authenticate("auth-form") {
+            post("/login") { call.loginUser() }
+        }
         get("/register") { call.registerPage() }
         post("/register") { call.registerUser() }
     }

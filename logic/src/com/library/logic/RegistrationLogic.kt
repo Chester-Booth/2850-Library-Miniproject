@@ -17,7 +17,7 @@ const val MAX_LENGTH = MAX_VARCHAR_LENGTH
 const val MIN_PASSWORD_LENGTH = 8
 
 // validate credentials
-fun NewUserCredentials.emailIsValid() = when {
+suspend fun NewUserCredentials.emailIsValid() = when {
     // it is hard to consider all edge cases, 
     // but it must at least contain one '.' and one '@'
     email.length < MIN_EMAIL_LENGTH -> false // a@b.cd
@@ -26,14 +26,14 @@ fun NewUserCredentials.emailIsValid() = when {
     else -> false
 }
 
-fun NewUserCredentials.userIsValid() = when {
+suspend fun NewUserCredentials.userIsValid() = when {
     username.length < MIN_USERNAME_LENGTH -> false
     username.length > MAX_LENGTH -> false
     username.all { it.isLetterOrDigit() || it == '_' } -> true
     else -> false
 }
 
-fun NewUserCredentials.passwordIsValid() = when {
+suspend fun NewUserCredentials.passwordIsValid() = when {
     password.length < MIN_PASSWORD_LENGTH -> false
     password.any { it.isWhitespace() } -> false
     else -> true
@@ -41,16 +41,18 @@ fun NewUserCredentials.passwordIsValid() = when {
 
 // add user to database
 suspend fun addUser(credentials: NewUserCredentials) {
+    println("debug: adding a user")
     suspendTransaction<Unit> {
-        val used_usernames = UsersTable.selectAll().map { it[UsersTable.username] }
-        val used_emails = UsersTable.selectAll().map { it[UsersTable.email] }
-        require(credentials.username !in used_usernames) { "Username already exists" }
-        require(credentials.email !in used_emails) { "Username already exists" }
+        val curr_usernames = UsersTable.selectAll().map { it[UsersTable.username] }
+        val curr_emails = UsersTable.selectAll().map { it[UsersTable.email] }
+
+        require(credentials.username !in curr_usernames) { "Username already exists" }
+        require(credentials.email !in curr_emails) { "Username already exists" }
         require(credentials.emailIsValid()) { "Invalid email" }
         require(credentials.userIsValid()) { "Invalid username" }
         require(credentials.passwordIsValid()) { "Invalid password" }
 
-        val hash = Password.hash(credentials.password).addRandomSalt(8).withScrypt().getResult() //.toString()
+        val hash = Password.hash(credentials.password).addRandomSalt(8).withScrypt().getResult() 
 
         UsersTable.insert {
             it[username] = credentials.username
