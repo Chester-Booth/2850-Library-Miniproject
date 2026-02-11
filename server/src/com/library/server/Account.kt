@@ -18,10 +18,8 @@ suspend fun ApplicationCall.accountPage() {
         respondText("User not found.")
         return
     }
-    val data = mapOf(
-        "username" to user.username, "email" to user.email, "address" to user.address
-    )
-    respondTemplate("account.peb", data)
+
+    respondTemplate("account.peb", user + mapOf("id" to userId))
 }
 
 suspend fun ApplicationCall.updatePassword() {
@@ -32,24 +30,15 @@ suspend fun ApplicationCall.updatePassword() {
     }
 
     val formParams = receiveParameters()
-    val oldPassword = formParams["oldPassword"]
-    val newPassword = formParams["newPassword"]
+    val oldPassword = formParams["oldPassword"] ?: ""
+    val newPassword = formParams["newPassword"] ?: ""
     val error = changePassword(userId, oldPassword, newPassword)
 
     if (error != null) {
-        val user = getUserById(userId)
-        val data = mapOf(
-            "username" to (user?.username ?: ""), "email" to (user?.email ?: ""),
-            "address" to (user?.address ?: ""), "error" to error
-        )
-        respondTemplate("account.peb", data)
+        val user = getUserById(userId) ?: emptyMap()
+        respondTemplate("account.peb", user + mapOf("error" to error))
         return
     }
-
-    val user = getUserById(userId)
-    val data = mapOf(
-        "username" to (user?.username ?: ""), "email" to (user?.email ?: ""),
-        "address" to (user?.address ?: ""), "success" to "Password updated sccessfully."
-    )
-    respondTemplate("account.peb", data)
+    val user = getUserById(userId) ?: emptyMap()
+    respondTemplate("account.peb", user + mapOf("success" to "Password upated successfully."))
 }

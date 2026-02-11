@@ -1,8 +1,7 @@
-{% extends "account.peb" %}
+{% extends "base.peb" %}
     {% block title %}Account Settings{% endblock %}
 {% block content %}
 <h1>Account Settings</h1>
-
 {% if error %}
 <p style="color: #C81D25;">{{ error }}</p>
 {% endif %}
