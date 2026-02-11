@@ -60,8 +60,30 @@ hr{
 
 }
 
+#search-button:hover{
+    color: var(--text-darker) !important;
+}
+
+#search-button .bi {
+    color: inherit;
+}
+
 .card {
     border: none;
-    background: var(--background-colour-1);!important;
+    background: var(--background-colour-1) !important;
 
+}
+
+.search-bar-full {
+    background: var(--accent-colour);
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    margin-bottom: 1rem;
+
+}
+
+
+.height-50px{
+    height: 50px;
 }

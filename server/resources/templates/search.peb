@@ -12,18 +12,27 @@
 
 <p>Currently we have <strong> {{ books }} books</strong> in our library.</p>
 
-<form role="search"
-  hx-post="/search"
-  hx-target="#search-results"
-  hx-swap="innerHTML"
-  hx-on::after-request="if(event.detail.successful) this.reset()">
-  <input
-    type="search"
-    name="q"
-    placeholder="Book Title"
-    aria-label="Search">
-  <input type="submit" value="Search">
-</form>
+<div class="search-bar-full">
+    <form role="search"
+      hx-post="/search"
+      hx-target="#search-results"
+      hx-swap="innerHTML"
+      hx-on::after-request="if(event.detail.successful) this.reset()"
+      class="d-flex gap-2 align-items-center justify-content-center py-3"
+      >
+        <input
+        type="search"
+        name="q"
+        placeholder="Book Title"
+        aria-label="Search"
+        class="form-control w-50 height-50px">
+
+        <button type="submit" class="btn btn-light height-50px" id="search-button">
+                <i class="bi bi-search"></i>
+                Search
+        </button>
+    </form>
+</div>
 
 <div id="search-results"></div>
 {% endblock %}
