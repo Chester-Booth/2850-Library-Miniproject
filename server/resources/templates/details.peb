@@ -6,11 +6,11 @@
     display:inline-block;
     padding:0.65rem 1.1rem;
     border-radius: 6px;
-    background: #8CB369;       
-    color: #242E2D;              
+    background: var(--confirm-colour);     
+    color: var(--heading-colour);             
     text-decoration: none;
     font-weight: 600;
-    border: 2px solid #242E2D;
+    border: 2px solid var(--heading-colour);
     transition: filter 150ms ease, transform 150ms ease;
   }
 
@@ -20,7 +20,7 @@
 
   .reserve-btn:focus,
   .reserve-btn:focus-visible{
-    outline: 3px solid #D7ACC0;  
+    outline: 3px solid var(--accent-colour); 
     outline-offset: 3px;
   }
 
