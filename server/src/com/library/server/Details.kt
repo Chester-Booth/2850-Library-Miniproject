@@ -1,8 +1,7 @@
 package com.library.server
 
 import com.library.logic.getBookByIsbn
-import io.ktor.http.*
-import io.ktor.server.application.*
+import io.ktor.server.application.ApplicationCall
 import io.ktor.server.pebble.respondTemplate
 
 suspend fun ApplicationCall.bookDetails() {
@@ -10,7 +9,7 @@ suspend fun ApplicationCall.bookDetails() {
     if (isbn == null) {
         respondTemplate(
             "details.peb",
-            mapOf("error" to "Invalid ISBN")
+            mapOf("error" to "Invalid ISBN"),
         )
         return
     }
@@ -19,13 +18,13 @@ suspend fun ApplicationCall.bookDetails() {
     if (book == null) {
         respondTemplate(
             "details.peb",
-            mapOf("error" to "Book not found")
+            mapOf("error" to "Book not found"),
         )
         return
     }
 
     respondTemplate(
         "details.peb",
-        mapOf("book" to book)
+        mapOf("book" to book),
     )
 }
