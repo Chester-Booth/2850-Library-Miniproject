@@ -42,4 +42,7 @@ out/
 actions-runner/
 
 ### Database ###
-*.db.DS_Store
+*.db
+
+### DS Store ###
+.DS_Store

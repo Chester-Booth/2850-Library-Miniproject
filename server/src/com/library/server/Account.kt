@@ -2,10 +2,10 @@ package com.library.server
 
 import com.library.logic.changePassword
 import com.library.logic.getUserById
-import io.ktor.server.application.*
-import io.ktor.server.request.*
-import io.ktor.server.response.*
-import io.ktor.server.pebble.*
+import io.ktor.server.application.ApplicationCall
+import io.ktor.server.pebble.respondTemplate
+import io.ktor.server.request.receiveParameters
+import io.ktor.server.response.respondText
 
 suspend fun ApplicationCall.accountPage() {
     val userId = parameters["id"]?.toIntOrNull()
