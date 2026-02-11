@@ -1,0 +1,14 @@
+{% extends "base.peb" %}
+{% block title %}Log In{% endblock %}
+{% block content %}
+<h1>Log In</h1>
+<form action="/login" method="POST">
+    
+    {% include "form_fields.peb" %}
+    <input type="submit" value="Log In">
+</form>
+{% include "form_error.peb" %}
+<p>Need an account? <a href="/register">Register</a></p>
+{% endblock %}
+
+

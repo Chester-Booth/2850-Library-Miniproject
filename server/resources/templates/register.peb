@@ -1,0 +1,21 @@
+{% extends "base.peb" %}
+{% block title %}Register{% endblock %}
+{% block content %}
+<h1>Register</h1>
+<ul>
+  <li>Usernames must be a minimum of 4 characters</li>
+  <li>Valid username characters are letters, digits and the underscore</li>
+  <li>Passwords must be a minimum of 8 characters, none of which can be whitespace</li>
+</ul>
+<form action="/register" method="POST">
+    <div>
+        <label for="emailField">Email</label>
+        <input id="emailField" name="email" required>
+    </div>
+    {% include "form_fields.peb" %}
+    <input type="submit" value="Register">
+</form>
+{% include "form_error.peb" %}
+<p>Already have an account? <a href="/login">Log In</a></p>
+{% endblock %}
+

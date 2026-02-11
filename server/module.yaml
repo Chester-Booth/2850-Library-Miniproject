@@ -16,6 +16,7 @@ dependencies:
   - $ktor.server.configYaml
   - ../database
   - org.jetbrains.exposed:exposed-jdbc:1.0.0
+  - $ktor.server.auth
 
 test-dependencies:
   - $ktor.server.testHost

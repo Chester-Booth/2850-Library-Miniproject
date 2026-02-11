@@ -12,6 +12,9 @@ fun Application.configureRouting() {
         get("/") { call.homePage() }
         get("/search") { call.searchPage() }
         post("/search") { call.searchResults() }
-        
+        get("/login") { call.loginPage() }
+        post("/login") { call.loginUser() }
+        get("/register") { call.registerPage() }
+        post("/register") { call.registerUser() }
     }
 }
