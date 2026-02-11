@@ -3,11 +3,10 @@ package com.library.server
 import com.library.logic.checkCredentials
 import io.ktor.server.application.Application
 import io.ktor.server.application.install
-import io.ktor.server.auth.form
-import io.ktor.server.pebble.respondTemplate
 import io.ktor.server.auth.Authentication
 import io.ktor.server.auth.UserIdPrincipal
-
+import io.ktor.server.auth.form
+import io.ktor.server.pebble.respondTemplate
 
 fun Application.configureAuthentication() {
     install(Authentication) {
@@ -21,10 +20,13 @@ fun Application.configureAuthentication() {
                 }
             }
             challenge {
-                call.respondTemplate("login.peb", mapOf(
-                    "error" to "Invalid username or password."
-                ))
+                call.respondTemplate(
+                    "login.peb",
+                    mapOf(
+                        "error" to "Invalid username or password.",
+                    ),
+                )
             }
         }
     }
-}
+} 
