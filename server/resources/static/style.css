@@ -15,7 +15,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .alt-background{
-    background: var(--alt-background-colour);
+    background: var(--background-colour-1);
 }
 
 .accent-background{
@@ -23,6 +23,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 .accent-text{
     color: var(--accent-colour);
+}
+
+.text-darker{
+    color: var(--text-darker);
 }
 
 .btn-yes{
@@ -42,6 +46,22 @@ hr{
 }
 
 /* fix colour for navbar text*/
-.nav-link, .navbar{
+.nav-link, .navbar, .btn{
     color: var(--text-colour) !important;
+}
+
+#details-button{
+    background: var(--background-colour-2);
+}
+
+#details-button:hover {
+    background: var(--background-colour-3);
+    color: var(--text-darker) !important;
+
+}
+
+.card {
+    border: none;
+    background: var(--background-colour-1);!important;
+
 }

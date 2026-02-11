@@ -3,7 +3,10 @@
     --deny-colour: #C81D25;
     --accent-colour: #D7ACC0;
     --text-colour: #475B5A;
+    --text-darker: #364544;
     --heading-colour: #242E2D;
     --background-colour: #F4F6F6;
-    --alt-background-colour: #DDE3E3;
+    --background-colour-1: #DDE3E3;
+    --background-colour-2: #C7D1D1;
+    --background-colour-3: #B0BFBF;
 }
