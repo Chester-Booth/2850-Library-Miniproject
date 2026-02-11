@@ -1,6 +1,5 @@
 package com.library.server
 
-import com.library.db.LibraryDatabase
 import com.library.db.TestDatabase
 import io.ktor.server.application.Application
 import org.jetbrains.exposed.v1.jdbc.transactions.TransactionManager
@@ -11,8 +10,11 @@ fun main(args: Array<String>) {
         .main(args)
 }
 
+@OptIn(ExperimentalTime::class)
 fun Application.module() {
-    TransactionManager.defaultDatabase = LibraryDatabase.db
+    TestDatabase.create()
+    TransactionManager.defaultDatabase = TestDatabase.db
+    // TransactionManager.defaultDatabase = LibraryDatabase.db
     configureTemplates()
     configureRouting()
 }
