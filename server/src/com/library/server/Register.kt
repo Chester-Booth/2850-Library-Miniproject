@@ -8,7 +8,6 @@ import io.ktor.server.request.receiveParameters
 import io.ktor.server.response.respondRedirect
 import kotlin.collections.mapOf
 import io.ktor.server.util.getOrFail
-import kotlin.text.lowercase
 import io.ktor.server.application.log
 
 
