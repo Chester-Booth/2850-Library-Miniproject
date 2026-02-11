@@ -44,12 +44,17 @@ fun addBooks(filePath: String): ISBNToIdMap {
                 continue
             } // skip entries without and ISBN
             val isbn = record[2].toDouble().toLong()
+            val notes =
+                try { record[5].trim() } catch (_: Exception) { "" }
+            val coverUrl =
+                try { record[6].trim() } catch (_: Exception) { "" }
             books[isbn] =
                 BooksTable.insertAndGetId {
                     it[title] = record[0]
                     it[author] = record[1]
                     it[bookISBN] = isbn
-                    it[details] = null
+                    it[details] = notes.ifBlank { null }
+                    it[BooksTable.coverUrl] = coverUrl.ifBlank { null }
                 }
         }
         return books

@@ -11,6 +11,7 @@ fun Application.configureRouting() {
         staticResources("/static", "static")
         get("/") { call.homePage() }
         get("/search") { call.searchPage() }
+        get("/details/{isbn}") { call.bookDetails() }
         post("/search") { call.searchResults() }
         
     }

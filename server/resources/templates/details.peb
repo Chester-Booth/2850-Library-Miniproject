@@ -1,0 +1,65 @@
+{% extends "base.peb" %}
+
+{% block content %}
+<style>
+  .reserve-btn{
+    display:inline-block;
+    padding:0.65rem 1.1rem;
+    border-radius: 6px;
+    background: #8CB369;       
+    color: #242E2D;              
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid #242E2D;
+    transition: filter 150ms ease, transform 150ms ease;
+  }
+
+  .reserve-btn:hover{
+    filter: brightness(0.9);     
+  }
+
+  .reserve-btn:focus,
+  .reserve-btn:focus-visible{
+    outline: 3px solid #D7ACC0;  
+    outline-offset: 3px;
+  }
+
+  .reserve-btn:active{
+    transform: translateY(1px);
+  }
+</style>
+
+  {% if error %}
+    <h1>{{ error }}</h1>
+  {% else %}
+    <h1>{{ book.title }}</h1>
+
+    <div style="display:flex; gap:2rem; align-items:flex-start; margin-top:1rem;">
+      {% if book.coverUrl %}
+        <img
+          src="{{ book.coverUrl }}"
+          alt="Cover of {{ book.title }}"
+          style="width:180px; height:240px; object-fit:cover; border:1px solid #bbb; background:#fff; border-radius:6px;"
+        />
+      {% else %}
+        <div style="width:180px; height:240px; border:1px solid #bbb; background:#fff; border-radius:6px;"></div>
+      {% endif %}
+
+      <div>
+        <p><strong>Author:</strong> {{ book.author }}</p>
+        <p><strong>ISBN:</strong> {{ book.bookISBN }}</p>
+
+        {% if book.details %}
+          <p><strong>Details:</strong> {{ book.details }}</p>
+        {% endif %}
+
+        <div style="margin-top:1.5rem;">
+          <a href="#"
+             class="reserve-btn">
+            Reserve book
+          </a>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+{% endblock %}
