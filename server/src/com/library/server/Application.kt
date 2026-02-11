@@ -13,6 +13,7 @@ fun main(args: Array<String>) {
 
 fun Application.module() {
     TransactionManager.defaultDatabase = LibraryDatabase.db
+    configureAuthentication()
     configureTemplates()
     configureRouting()
 }
@@ -23,4 +24,5 @@ fun Application.testModule() {
     TransactionManager.defaultDatabase = TestDatabase.db
     configureTemplates()
     configureRouting()
+    configureAuthentication()
 }
