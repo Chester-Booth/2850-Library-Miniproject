@@ -41,49 +41,28 @@ hr{
     border: 0.2rem solid;
 }
 
+/* css for navbar */
 .navbar {
     margin-bottom: 1rem;
 }
 
-/* fix colour for navbar text*/
 .nav-link, .navbar, .btn{
     color: var(--text-colour) !important;
 }
 
-#details-button{
-    background: var(--background-colour-2);
-}
-
-#details-button:hover {
-    background: var(--background-colour-3);
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
     color: var(--text-darker) !important;
 
 }
 
-#search-button:hover{
-    color: var(--text-darker) !important;
-}
-
-#search-button .bi {
+.navbar .nav-link:hover .bi,
+.navbar .nav-link:focus .bi {
     color: inherit;
 }
-
-.card {
-    border: none;
-    background: var(--background-colour-1) !important;
-
-}
-
-.search-bar-full {
-    background: var(--accent-colour);
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-    margin-bottom: 1rem;
-
-}
+/* end of css for navbar */
 
 
-.height-50px{
-    height: 50px;
-}
+
+
+
