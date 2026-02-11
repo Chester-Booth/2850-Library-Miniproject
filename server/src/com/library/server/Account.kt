@@ -2,10 +2,10 @@ package com.library.server
 
 import com.library.logic.changePassword
 import com.library.logic.getUserById
-import io.ktor.server.application.*
-import io.ktor.server.request.*
-import io.ktor.server.response.*
-import io.ktor.server.pebble.*
+import io.ktor.server.application.ApplicationCall
+import io.ktor.server.pebble.respondTemplate
+import io.ktor.server.request.receiveParameters
+import io.ktor.server.response.respondText
 
 suspend fun ApplicationCall.accountPage() {
     val userId = parameters["id"]?.toIntOrNull()
@@ -40,5 +40,5 @@ suspend fun ApplicationCall.updatePassword() {
         return
     }
     val user = getUserById(userId) ?: emptyMap()
-    respondTemplate("account.peb", user + mapOf("id" to userId.toString(), "success" to "Password updated successfully."))
+    respondTemplate("account.peb", user + mapOf("success" to "Password upated successfully."))
 }
