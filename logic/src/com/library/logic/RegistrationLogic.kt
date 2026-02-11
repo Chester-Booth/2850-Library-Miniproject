@@ -1,15 +1,11 @@
 package com.library.logic
 
-import com.library.db.LibraryDatabase
-import com.library.db.Users
 import com.library.db.UsersTable
 import com.library.db.MAX_VARCHAR_LENGTH
 import com.password4j.Password
+import org.jetbrains.exposed.v1.jdbc.selectAll
+import org.jetbrains.exposed.v1.jdbc.insert
 import org.jetbrains.exposed.v1.jdbc.transactions.suspendTransaction
-import org.jetbrains.exposed.v1.jdbc.*
-// fix wildcard import later
-import org.jetbrains.exposed.v1.jdbc.transactions.transaction
-
 
 const val MIN_USERNAME_LENGTH = 4
 const val MIN_EMAIL_LENGTH = 6
@@ -41,7 +37,6 @@ suspend fun NewUserCredentials.passwordIsValid() = when {
 
 // add user to database
 suspend fun addUser(credentials: NewUserCredentials) {
-    println("debug: adding a user")
     suspendTransaction<Unit> {
         val curr_usernames = UsersTable.selectAll().map { it[UsersTable.username] }
         val curr_emails = UsersTable.selectAll().map { it[UsersTable.email] }
@@ -57,7 +52,7 @@ suspend fun addUser(credentials: NewUserCredentials) {
         UsersTable.insert {
             it[username] = credentials.username
             it[email] = credentials.email
-            it[passwordHash] = hash // passwordHash
+            it[passwordHash] = hash
         }
     }
 }
