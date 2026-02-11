@@ -1,0 +1,8 @@
+<div>
+    <label for="usernameField">Username</label>
+    <input id="usernameField" name="username" required>
+</div>
+<div>
+<label for="passwordField">Password</label>
+<input id="passwordField" name="password" type="password" required>
+</div>
