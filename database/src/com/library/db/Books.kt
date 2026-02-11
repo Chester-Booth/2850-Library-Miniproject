@@ -13,6 +13,7 @@ object BooksTable : IntIdTable("books") {
     val author = varchar("author", MAX_VARCHAR_LENGTH)
     val bookISBN = long("isbn").nullable() // integer is too short
     val details = varchar("details", MAX_VARCHAR_LENGTH).nullable()
+    val coverUrl = varchar("cover_url", 1024).nullable()
 }
 
 // Entity Definition
@@ -26,6 +27,7 @@ class Books(
     var bookISBN by BooksTable.bookISBN
     var details by BooksTable.details
     val copies by Copies referrersOn CopiesTable.bookId
+    var coverUrl by BooksTable.coverUrl
 
     override fun toString(): String = "Books(id=$id, title=$title, isbn=$bookISBN)"
 }
