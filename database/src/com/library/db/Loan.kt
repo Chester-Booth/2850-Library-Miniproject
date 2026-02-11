@@ -30,5 +30,5 @@ class Loan(
     val userId by Users referencedOn LoanTable.userId // check
     val copyId by Copies referencedOn LoanTable.copyId // check
 
-    override fun toString(): String = "Users(id=$id, dateOut=$dateOut, dateIn=$dateOut, status=$status, userId=$userId)"
+    override fun toString(): String = "Users(id=$id, dateOut=$dateOut, dateIn=$dateIn, status=$status, userId=$userId)"
 }
