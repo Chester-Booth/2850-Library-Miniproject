@@ -40,5 +40,5 @@ suspend fun ApplicationCall.updatePassword() {
         return
     }
     val user = getUserById(userId) ?: emptyMap()
-    respondTemplate("account.peb", user + mapOf("success" to "Password upated successfully."))
+    respondTemplate("account.peb", user + mapOf("id" to userId.toString(), "success" to "Password updated successfully."))
 }
