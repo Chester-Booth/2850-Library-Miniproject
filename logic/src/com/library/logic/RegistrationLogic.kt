@@ -35,6 +35,11 @@ suspend fun NewUserCredentials.passwordIsValid() = when {
     else -> true
 }
 
+suspend fun NewUserCredentials.addressIsValid() = when {
+    password.length > MAX_LENGTH -> false
+    else -> true
+}
+
 // add user to database
 suspend fun addUser(credentials: NewUserCredentials) {
     suspendTransaction<Unit> {
@@ -46,6 +51,7 @@ suspend fun addUser(credentials: NewUserCredentials) {
         require(credentials.emailIsValid()) { "Invalid email" }
         require(credentials.userIsValid()) { "Invalid username" }
         require(credentials.passwordIsValid()) { "Invalid password" }
+        require(credentials.passwordIsValid()) { "Invalid address" }
 
         val hash = Password.hash(credentials.password).addRandomSalt(8).withScrypt().getResult() 
 
@@ -53,6 +59,7 @@ suspend fun addUser(credentials: NewUserCredentials) {
             it[username] = credentials.username
             it[email] = credentials.email
             it[passwordHash] = hash
+            it[address] = credentials.address
         }
     }
 }

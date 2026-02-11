@@ -36,5 +36,6 @@ private suspend fun ApplicationCall.getCredentials(): NewUserCredentials {
     val username = formParams.getOrFail("username")
     val email = formParams.getOrFail("email")
     val password = formParams.getOrFail("password")
-    return NewUserCredentials(username, email, password)
+    val address = formParams.getOrFail("address")
+    return NewUserCredentials(username, email, password, address)
 }

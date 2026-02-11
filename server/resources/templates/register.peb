@@ -13,6 +13,10 @@
         <input id="emailField" name="email" required>
     </div>
     {% include "form_fields.peb" %}
+    <div>
+        <label for="addressField">Address</label>
+        <input id="addressFieldField" name="address">
+    </div>
     <input type="submit" value="Register">
 </form>
 {% include "form_error.peb" %}

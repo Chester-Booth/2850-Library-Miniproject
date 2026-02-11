@@ -4,5 +4,6 @@ package com.library.logic
 data class NewUserCredentials(
     val username: String,
     val email: String,
-    val password: String
+    val password: String,
+    val address: String
 )
