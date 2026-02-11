@@ -22,7 +22,7 @@ fun Application.module() {
 fun Application.testModule() {
     TestDatabase.create()
     TransactionManager.defaultDatabase = TestDatabase.db
+    configureAuthentication()
     configureTemplates()
     configureRouting()
-    configureAuthentication()
 }

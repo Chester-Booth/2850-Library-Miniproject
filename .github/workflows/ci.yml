@@ -23,11 +23,22 @@ jobs:
         if: runner.os != 'Windows'
         run: chmod +x ./amper
 
-      - name: run tests
+      - name: run server tests
         run: ./amper test -m server
+      
+      - name: run logic tests
+        run: ./amper test -m logic
 
-      - name: build
+      - name: build server
         run: ./amper build -m server
+      
+      - name: build logic
+        run: ./amper build -m logic
+      
+      - name: build database
+        run: ./amper build -m database
+      
+      
 
 
 
