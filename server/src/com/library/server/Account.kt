@@ -28,7 +28,6 @@ suspend fun ApplicationCall.updatePassword() {
         respondText("Invalid user ID.")
         return
     }
-
     val formParams = receiveParameters()
     val oldPassword = formParams["oldPassword"] ?: ""
     val newPassword = formParams["newPassword"] ?: ""
