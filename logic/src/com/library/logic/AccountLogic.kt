@@ -12,7 +12,7 @@ fun getUserById(id: Int): Users? {
 
 fun changePassword(id: Int, oldPassword: String, newPassword: String): String? {
     return transactions {
-        val user = Users.findByID(id) ?: return@transaction "User not found."
+        val user = Users.findById(id) ?: return@transaction "User not found."
 
         if (user.passwordHash != oldPassword) {
             return@transaction "Incorrect current password."
