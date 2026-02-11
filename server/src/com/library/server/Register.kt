@@ -24,7 +24,7 @@ suspend fun ApplicationCall.registerUser() {
 
     if (result.isSuccess) {
         application.log.info("User ${credentials.username} registered")
-        respondRedirect("/login")
+        respondRedirect("/login?registered=true") // redirect to log in page
     } else {
         val error = result.exceptionOrNull()?.message ?: ""
         respondTemplate("register.peb", model = mapOf("error" to error))

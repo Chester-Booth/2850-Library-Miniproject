@@ -3,6 +3,7 @@ package com.library.server
 import io.ktor.server.application.Application
 import io.ktor.server.application.ApplicationCall
 import io.ktor.server.application.log
+import io.ktor.server.application.call
 import io.ktor.server.auth.UserIdPrincipal
 import io.ktor.server.auth.UserPasswordCredential
 import io.ktor.server.auth.authenticate
@@ -19,13 +20,12 @@ import io.ktor.server.sessions.set
 import io.ktor.server.util.getOrFail
 
 suspend fun ApplicationCall.loginPage() {
-    respondTemplate("login.peb", mapOf())
+    val registered = request.queryParameters["registered"] ?: "" // for newly registered users
+    respondTemplate("login.peb", mapOf("registered" to registered))
 }
 
 suspend fun ApplicationCall.loginUser() { 
     val username = principal<UserIdPrincipal>()?.name.toString()
-    println("debug: here")
     application.log.info("User $username logged in")
     respondRedirect("/")
-    //sessions.set(UserSession(username, 1))
 }
