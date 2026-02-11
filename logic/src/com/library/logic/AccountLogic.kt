@@ -1,24 +1,27 @@
 package com.library.logic
 
 import com.library.db.Users
-import com.library.db.UsersTable
-import org.jetbrains.exposed.sql.transactions.transactions
+import org.jetbrains.exposed.v1.jdbc.transactions.suspendTransaction
 
-fun getUserById(id: Int): Users? {
-    return transaction {
-        Users.findById(id)
+suspend fun getUserById(id: Int): Map<String, String>? {
+    return suspendTransaction {
+        val user = Users.findById(id) ?: return@suspendTransaction null
+        mapOf(
+            "username" to user.username, "email" to user.email,
+            "address" to user.address, "passwordHash" to user.passwordHash
+        )
     }
 }
 
-fun changePassword(id: Int, oldPassword: String, newPassword: String): String? {
-    return transactions {
-        val user = Users.findById(id) ?: return@transaction "User not found."
+suspend fun changePassword(id: Int, oldPassword: String, newPassword: String): String? {
+    return suspendTransaction {
+        val user = Users.findById(id) ?: return@suspendTransaction "User not found."
 
         if (user.passwordHash != oldPassword) {
-            return@transaction "Incorrect current password."
+            return@suspendTransaction "Incorrect current password."
         }
         if (newPassword.isBlank()) {
-            return@transaction "New password cannot be empty."
+            return@suspendTransaction "New password cannot be empty."
         }
 
         user.passwordHash = newPassword // proper hashing later
