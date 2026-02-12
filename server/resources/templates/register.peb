@@ -5,7 +5,7 @@
 <ul>
   <li>Usernames must be a minimum of 4 characters</li>
   <li>Valid username characters are letters, digits and the underscore</li>
-  <li>Passwords must be a minimum of 8 characters, none of which can be whitespace</li>
+  <li>Passwords must be a minimum of 8 characters, including uppercase and lowercase letters, numbers and symbols</li>
 </ul>
 <form action="/register" method="POST">
     <div>
