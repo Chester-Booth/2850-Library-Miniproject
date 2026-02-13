@@ -1,6 +1,8 @@
 package com.library.logic
 
 import com.library.db.Users
+import com.library.db.UsersTable
+import org.jetbrains.exposed.v1.core.eq
 import org.jetbrains.exposed.v1.jdbc.transactions.suspendTransaction
 
 suspend fun getUserById(id: Int): Map<String, String>? {
@@ -8,6 +10,23 @@ suspend fun getUserById(id: Int): Map<String, String>? {
         val user = Users.findById(id) ?: return@suspendTransaction null
         mapOf(
             "username" to user.username,
+            "email" to user.email,
+            "address" to user.address,
+            "passwordHash" to user.passwordHash,
+        )
+    }
+}
+
+suspend fun getUserByUsername(username: String): Map<String, String>? {
+    return suspendTransaction {
+        val user =
+            Users
+                .find { UsersTable.username eq username }
+                .singleOrNull()
+                ?: return@suspendTransaction null
+
+        mapOf(
+            "id" to user.id.value.toString(),
             "email" to user.email,
             "address" to user.address,
             "passwordHash" to user.passwordHash,

@@ -1,5 +1,6 @@
 package com.library.server
 
+import com.library.logic.getUserByUsername
 import io.ktor.server.application.ApplicationCall
 import io.ktor.server.application.log
 import io.ktor.server.auth.UserIdPrincipal
@@ -15,5 +16,7 @@ suspend fun ApplicationCall.loginPage() {
 suspend fun ApplicationCall.loginUser() {
     val username = principal<UserIdPrincipal>()?.name.toString()
     application.log.info("User $username logged in")
-    respondRedirect("/")
+    val user = getUserByUsername(username) ?: emptyMap()
+    val id = user["id"] ?: ""
+    respondRedirect("/?login=true&id=$id")
 }
