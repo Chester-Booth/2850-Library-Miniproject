@@ -27,8 +27,8 @@ suspend fun NewUserCredentials.emailIsValid() =
         // a@b.cd
         email.length > MAX_LENGTH -> false
 
-        // could use character limits in regex, but it would be at expense or readability
-        else -> Regex("^(?!.*\\.\\.)[^ .][^ ]*@[a-z]+.[a-z]+$").containsMatchIn(email)
+        // could use character limits in regex, but it would be at expense of readability
+        else -> Regex("^(?!.*\\.\\.)[^ .][^ ]*@[^ ]+\\.[^ .]+$").containsMatchIn(email)
     }
 
 suspend fun NewUserCredentials.userIsValid() =
