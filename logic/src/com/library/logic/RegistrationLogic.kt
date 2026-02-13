@@ -27,8 +27,8 @@ suspend fun NewUserCredentials.emailIsValid() =
         // a@b.cd
         email.length > MAX_LENGTH -> false
 
-        // could use character limits in regex, but it would be at expense or readability
-        else -> Regex("^(?!.*\\.\\.)[^ .][^ ]*@[a-z]+.[a-z]+$").containsMatchIn(email)
+        // could use character limits in regex, but it would be at expense of readability
+        else -> Regex("^(?!.*\\.\\.)[^ .][^ ]*@[^ ]+\\.[^ .]+$").containsMatchIn(email)
     }
 
 suspend fun NewUserCredentials.userIsValid() =
@@ -65,9 +65,10 @@ suspend fun addUser(credentials: NewUserCredentials) {
         val currUsernames = UsersTable.selectAll().map { it[UsersTable.username] }
         val currEmails = UsersTable.selectAll().map { it[UsersTable.email] }
         val newUsername = credentials.username.lowercase()
+        val newEmail = credentials.email.lowercase()
 
         require(newUsername !in currUsernames) { "Username already exists" }
-        require(credentials.email !in currEmails) { "Username already exists" }
+        require(newEmail !in currEmails) { "Email already in use" }
         require(credentials.emailIsValid()) { "Invalid email" }
         require(credentials.userIsValid()) { "Invalid username" }
         require(credentials.passwordIsNotCommon(COMMON_PASSWORD_LIST)) { "Password is too weak" }
@@ -83,7 +84,7 @@ suspend fun addUser(credentials: NewUserCredentials) {
 
         UsersTable.insert {
             it[username] = newUsername
-            it[email] = credentials.email
+            it[email] = newEmail
             it[passwordHash] = hash
             it[address] = credentials.address
         }
