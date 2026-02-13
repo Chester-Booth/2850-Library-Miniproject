@@ -35,11 +35,11 @@
       <ul class="navbar-nav">
         <li class="nav-item">
             <a class="nav-link" href="/">
-                <i class="bi bi-house-fill"></i>Home</a>
+                <i class="bi bi-house-fill"></i> Home</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="/loans">
-              <i class="bi bi-bookmarks-fill"></i>Loans</a>
+              <i class="bi bi-bookmarks-fill"></i> Loans</a>
         </li>
       </ul>
 
@@ -47,12 +47,19 @@
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
           <a class="nav-link" href="/search">
-              <i class="bi bi-search"></i>Search</a>
+              <i class="bi bi-search"></i> Search</a>
         </li>
+        {% if isLoggedIn %}
         <li class="nav-item">
-          <a class="nav-link" href="/login">
+          <a class="nav-link" href="/account/{{ id }}">
               <i class="bi bi-person-circle me-1"></i>Account</a>
         </li>
+        {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="/login">
+              <i class="bi bi-box-arrow-in-right"></i> Login/Register</a>
+        </li>
+        {% endif %}
       </ul>
     </div>
   </div>
