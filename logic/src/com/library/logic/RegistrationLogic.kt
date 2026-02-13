@@ -14,7 +14,7 @@ const val MIN_USERNAME_LENGTH = 4
 const val MIN_EMAIL_LENGTH = 6
 const val MAX_LENGTH = MAX_VARCHAR_LENGTH
 const val MIN_PASSWORD_LENGTH = 8
-const val COMMON_PASSWORD_LIST = "../data/10k-most-common.txt"
+const val COMMON_PASSWORD_LIST = "./data/10k-most-common.txt"
 
 
 // validate credentials
