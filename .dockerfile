@@ -6,7 +6,7 @@ COPY . .
 
 RUN ./amper build
 
-RUN ./amper -m init
+RUN ./amper run -m init
 
 EXPOSE 8080
 
